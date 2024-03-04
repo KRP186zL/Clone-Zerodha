@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+header.header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.7em;
+  border-bottom: 0.1px solid rgba(171, 168, 168, 0.2);
+  font-size: 0.9em;
+}
+
+header.header .logo {
+  width: 250px;
+}
+
+header.header .logo img {
+  width: 130px;
+  transition: all 0.2s;
+}
+
+/* Navigasi */
+nav.navigasi {
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+}
+
+nav.navigasi ul {
+  display: flex;
+  gap: 3em;
+}
+
+nav.navigasi ul li {
+  list-style: none;
+}
+
+nav.navigasi ul li a {
+  text-decoration: none;
+  color: #6b6969;
+}
+nav.navigasi ul li a:hover {
+  color: #538fd7;
+}
+
+/* Hamburger */
+.hamburger {
+  transition: all 0.2s;
+  margin-block-start: 2px;
+}
+
+.hamburger span {
+  display: block;
+  width: 17px;
+  height: 2px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+.hamburger span:first-child {
+  background-color: #7a7878;
+}
+
+.hamburger span:nth-child(2) {
+  background-color: #7a7878;
+}
+
+.hamburger span:last-child {
+  background-color: #7a7878;
+}
+
+/* Main  */
+section.lobby {
+  display: flex;
+  flex-direction: column;
+}
+
+main.main .hero-image {
+  max-width: 900px;
+  margin: 3% auto;
+}
+main.main .hero-image img {
+  width: 100%;
+}
+
+main.main .content {
+  display: flex;
+  color: #424242;
+  text-align: center;
+  flex-direction: column;
+  gap: 1em;
+}
+main.main .content > h3 {
+  font-size: 2.5em;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+main.main .content > p {
+  font-size: 1.4em;
+  transition: all 0.5s;
+}
+
+button {
+  margin: 2em auto;
+  max-width: 400px;
+  font-size: 1.2em;
+  padding: 0.7em 2em;
+  font-weight: 600;
+  color: white;
+  background-color: #4d8bd7;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Responsif */
+@media screen and (max-width: 960px) {
+  header.header {
+    justify-content: space-between;
+  }
+  header.header .logo img {
+    transform: scale(1.1);
+  }
+  nav.navigasi {
+    justify-content: flex-end;
+  }
+  nav.navigasi ul li {
+    display: none;
+  }
+  .hamburger {
+    transform: scale(1.5);
+  }
+  main.main .content {
+    padding: 1em;
+  }
+  main.main .content > h3 {
+    font-size: 2em;
+  }
+  main.main .content > p {
+    font-size: 1em;
+  }
+}
